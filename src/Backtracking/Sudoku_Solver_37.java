@@ -1,8 +1,11 @@
-package HashTable;
+package Backtracking;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.PriorityQueue;
+
+import HashTable.Valid_Sudoku_36_2;
+import HashTable.Valid_Sudoku_36_2.Solution;
 
 public class Sudoku_Solver_37 {
 	
