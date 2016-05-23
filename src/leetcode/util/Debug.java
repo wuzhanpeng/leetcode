@@ -35,4 +35,10 @@ public class Debug {
 		}
 		System.out.println(" ]");
 	}
+	public static void printMatrix(int[][] matrix) {
+		if (null == matrix) { System.out.println("null"); }
+		for (int[] list : matrix) {
+			printArray(list);
+		}
+	}
 }
