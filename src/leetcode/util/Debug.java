@@ -11,6 +11,14 @@ public class Debug {
 		}
 		System.out.println(" ]");
 	}
+	public static void printArray(long[] array) {
+		if (null == array) { System.out.println("null"); }
+		System.out.printf("[");
+		for (long x : array) {
+			System.out.printf(" %d", x);
+		}
+		System.out.println(" ]");
+	}
 	public static void printArray(Integer[] array) {
 		if (null == array) { System.out.println("null"); }
 		System.out.printf("[");

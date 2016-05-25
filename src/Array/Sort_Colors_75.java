@@ -2,6 +2,7 @@ package Array;
 
 public class Sort_Colors_75 {
 	
+	/** https://leetcode.com/discuss/94557/simple-one-pass-solution */
 	public class Solution {
 	    public void sortColors(int[] nums) {
 	        int l = 0, r = nums.length - 1;
