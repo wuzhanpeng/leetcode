@@ -29,7 +29,7 @@ public class Combinations_77 {
 	}
 
 	public static void main(String[] args) {
-		new Combinations_77().new Solution().combine(1, 1);
+		new Combinations_77().new Solution().combine(5, 3);
 	}
 
 }

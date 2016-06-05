@@ -1,5 +1,6 @@
 package leetcode.util;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class Debug {
@@ -42,6 +43,24 @@ public class Debug {
 			System.out.printf(" %s", x);
 		}
 		System.out.println(" ]");
+	}
+	public static <E> void printLists(List<List<E>> lists) {
+		if (null == lists) { System.out.println("null"); }
+		System.out.printf("Size: %d\n", lists.size());
+		lists.sort(new Comparator<List<E>>() {
+
+			@Override
+			public int compare(List<E> o1, List<E> o2) {
+				return o1.size() - o2.size();
+			}
+		});
+		for (List<E> list : lists) {
+			System.out.printf("[");
+			for (E x : list) {
+				System.out.printf(" %s", x);
+			}
+			System.out.println(" ]");
+		}
 	}
 	public static void printMatrix(int[][] matrix) {
 		if (null == matrix) { System.out.println("null"); }
