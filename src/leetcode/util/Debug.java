@@ -36,7 +36,7 @@ public class Debug {
 		}
 		System.out.println(" ]");
 	}
-	public static <E> void printArray(List<E> list) {
+	public static <E> void printList(List<E> list) {
 		if (null == list) { System.out.println("null"); }
 		System.out.printf("[");
 		for (E x : list) {
