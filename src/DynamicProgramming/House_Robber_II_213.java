@@ -4,6 +4,7 @@ public class House_Robber_II_213 {
 	
 	/**
 	 * DP * 2
+	 * rob the first or rob the last
 	 * */
 	public class Solution {
 	    public int rob(int[] nums) {
@@ -29,8 +30,6 @@ public class House_Robber_II_213 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 	}
 
 }
