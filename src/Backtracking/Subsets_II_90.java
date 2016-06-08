@@ -1,20 +1,23 @@
 package Backtracking;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
 import leetcode.util.Debug;
 
-public class Subsets_78 {
+public class Subsets_II_90 {
 	
 	public class Solution {
 		private List<List<Integer>> subSets = new LinkedList<List<Integer>>();
-	    public List<List<Integer>> subsets(int[] nums) {
+		private HashSet<List<Integer>> checkedSet = new HashSet<List<Integer>>();
+	    public List<List<Integer>> subsetsWithDup(int[] nums) {
 	    	subSets.add(Arrays.asList(new Integer[]{}));
 	    	List<Integer> tot = new LinkedList<>();
 	    	for (int num : nums) { tot.add(num); }
 	    	subSets.add(tot);
+	    	Arrays.sort(nums);
 	    	backtracking(nums, nums.length / 2, 0, new boolean[nums.length]);
 	    	Debug.printLists(subSets);
 	        return subSets;
@@ -39,18 +42,21 @@ public class Subsets_78 {
 					S.add(ref[i]);
 				}
 			}
-			subSets.add(A); 
-			if (!(tags.length % 2 == 0 && isEven)) { subSets.add(S); }
+			if (!checkedSet.contains(A)) {
+				subSets.add(A);
+				checkedSet.add(A);
+			}
+			if (!(tags.length % 2 == 0 && isEven) && !checkedSet.contains(S)) {
+				subSets.add(S);
+				checkedSet.add(S);
+			}
 //			Debug.printArray(A);Debug.printArray(S);
 		}
 	}
 
 	public static void main(String[] args) {
-		new Subsets_78().new Solution().subsets(new int[]{1,2,3,4});
-		System.out.println("------");
-		new Subsets_78().new Solution().subsets(new int[]{1,2,3,4,5});
-//		System.out.println("------");
-//		new Subsets_78().new Solution().subsets(new int[]{1,2,2});
+		new Subsets_II_90().new Solution().subsetsWithDup(new int[]{1,2,2});
+		new Subsets_II_90().new Solution().subsetsWithDup(new int[]{4,4,4,1,4});
 	}
 
 }
