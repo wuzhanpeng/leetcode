@@ -15,6 +15,7 @@ public class Search_for_a_Range_34 {
 					break;
 				}
 	        }
+	        mid = (l + r) / 2;
 	        if (target == nums[mid]) {
 	        	int beg = mid, end = mid;
 	        	while (beg > 0 && target == nums[beg - 1]) { -- beg; }
