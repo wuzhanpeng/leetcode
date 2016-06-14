@@ -1,3 +1,4 @@
+package BinaryTree;
 import java.util.HashMap;
 
 import leetcode.util.TreeNode;
@@ -16,7 +17,7 @@ public class Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal_105 {
 	    	return construct(preorder, 0, preorder.length - 1);
 	    }
 	    private TreeNode construct(int[] preorder, int beg, int end) {
-			if (beg > end || idx == preorder.length) { -- idx; return null; }
+			if (beg > end) { -- idx; return null; }
 			TreeNode node = new TreeNode(preorder[idx]);
 			int pos = map.get(preorder[idx]);
 			++ idx;
