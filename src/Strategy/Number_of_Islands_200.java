@@ -47,9 +47,9 @@ public class Number_of_Islands_200 {
 					}
 	        		
 	        		// debug
-	        		if (1 == ans) {
-	        			System.out.printf("(%d, %d)\n", i, j);
-	        		}
+//	        		if (1 == ans) {
+//	        			System.out.printf("(%d, %d)\n", i, j);
+//	        		}
 	        	}
 	        }
 	        return ans;
